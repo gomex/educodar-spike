@@ -1,0 +1,11 @@
+programa {
+    endereços {
+        para '/teste/1' faça {
+            retorna 'Oi, Teste 1';
+        }
+
+        para '/teste/2' faça {
+            retorna 'Oi, Teste 2';
+        }
+    }
+}

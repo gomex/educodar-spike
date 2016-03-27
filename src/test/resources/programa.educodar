@@ -1,0 +1,25 @@
+
+programa {
+
+    endereços {
+
+        para '/teste' faça {
+            retorna 'Oi';
+        }
+
+        para 'api/v1/teste-complexo/123?cache=true' faça {
+            retorna
+            '
+                <html>
+                    <head>
+                        <title>Resposta</title>
+                    </head>
+
+                    <body>
+                        <h1>Resposta complexa</h1>
+                    </body>
+                </html>
+            ';
+        }
+    }
+}

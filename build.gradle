@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'Application'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+dependencies {
+    compile 'org.antlr:antlr4:4.5.2-1'
+
+    testCompile 'junit:junit:4.12'
+}
