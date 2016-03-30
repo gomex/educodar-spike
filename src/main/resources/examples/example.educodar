@@ -1,5 +1,9 @@
 programa {
     endereços {
+        para '/' faça {
+            retorna 'Eba! o/ Esta tudo funcionando!';
+        }
+
         para '/teste/1' faça {
             retorna 'Oi, Teste 1';
         }
