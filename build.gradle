@@ -1,7 +1,14 @@
 apply plugin: 'java'
+apply plugin: 'antlr'
 
 repositories {
     jcenter()
+}
+
+generateGrammarSource {
+    arguments += ["-visitor", "-no-listener"]
+    arguments += ["-package", "educodar"]
+    outputDirectory = new File("${project.rootDir}/src/main/java/educodar".toString())
 }
 
 task fatJar(type: Jar) {
@@ -14,6 +21,8 @@ task fatJar(type: Jar) {
 }
 
 dependencies {
+    antlr 'org.antlr:antlr4:4.5.2-1'
+
     compile 'org.antlr:antlr4:4.5.2-1'
 
     testCompile 'junit:junit:4.12'
