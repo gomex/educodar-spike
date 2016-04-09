@@ -13,7 +13,7 @@ generateGrammarSource {
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Main-Class': 'Application'
+        attributes 'Main-Class': 'educodar.Application'
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }

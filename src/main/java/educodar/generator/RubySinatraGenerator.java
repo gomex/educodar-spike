@@ -1,4 +1,4 @@
-package generator;
+package educodar.generator;
 
 import educodar.antlr.EducodarBaseVisitor;
 import educodar.antlr.EducodarParser;
