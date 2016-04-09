@@ -1,7 +1,7 @@
 package generator;
 
-import educodar.EducodarBaseVisitor;
-import educodar.EducodarParser;
+import educodar.antlr.EducodarBaseVisitor;
+import educodar.antlr.EducodarParser;
 
 public class RubySinatraGenerator extends EducodarBaseVisitor {
     @Override

@@ -1,5 +1,5 @@
-import educodar.EducodarLexer;
-import educodar.EducodarParser;
+import educodar.antlr.EducodarLexer;
+import educodar.antlr.EducodarParser;
 import generator.RubySinatraGenerator;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;

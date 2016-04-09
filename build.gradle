@@ -7,8 +7,8 @@ repositories {
 
 generateGrammarSource {
     arguments += ["-visitor", "-no-listener"]
-    arguments += ["-package", "educodar"]
-    outputDirectory = new File("${project.rootDir}/src/main/java/educodar".toString())
+    arguments += ["-package", "educodar.antlr"]
+    outputDirectory = new File("${project.rootDir}/src/main/java/educodar/antlr".toString())
 }
 
 task fatJar(type: Jar) {
