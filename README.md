@@ -8,6 +8,20 @@ O primeiro passo necessário é clonar o projeto do GitHub.
  git clone https://github.com/guilhermedias/educodar-spike.git
 ```
 
+## Usando as imagens Docker
+
+Garanta que o Docker e Docker Compose estão instalados na sua estação, seja com Docker Toolbox ou não.
+
+Execute o seguinte comando na pasta onde baixou os arquivos do git:
+
+```
+docker-compose up
+```
+
+Agora basta conectar no IP do seu docker host e verá o resultado da aplicação. Caso esteja usando Docker Toolbox o ip normalmente é 192.168.99.100. Caso esteja usando GNU/Linux, basta acessar a 127.0.0.1 via navegador.
+
+## Usando a partir dos fontes (Sem Docker) 
+
 Agora que você já clonou o projeto pode entrar na pasta pois vamos criar o nosso compilador. Dentro da pasta
 a gente pode executar o comando abaixo, que vai gerar o nosso compilador em um arquivo chamado educodar-all.java
 dentro da pasta build/libs/.
