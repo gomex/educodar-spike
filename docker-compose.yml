@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  compilador:
+    build:
+      context: .
+      dockerfile: Dockerfile_java
+    volumes:
+      - ./:/educodar
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile_ruby
+    volumes:
+      - ./:/educodar
+    ports:
+      - 80:4567
+    depends_on:
+      - compilador

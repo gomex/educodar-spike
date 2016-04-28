@@ -1,0 +1,6 @@
+FROM java
+COPY ./ /educodar
+WORKDIR /educodar
+RUN ./gradlew fatJar
+ENTRYPOINT ["java","-jar","build/libs/educodar-all.jar"]
+CMD ["src/main/resources/examples/example.educodar"]
