@@ -1,5 +1,6 @@
 FROM ruby
 RUN gem install sinatra
+COPY ./ /educodar
 WORKDIR /educodar
 #CMD ["ruby","compiled.rb","-o","0.0.0.0"] 
 CMD ["./checa_compilado.sh"]

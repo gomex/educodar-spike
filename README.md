@@ -12,13 +12,21 @@ O primeiro passo necessário é clonar o projeto do GitHub.
 
 Garanta que o Docker e Docker Compose estão instalados na sua estação, seja com Docker Toolbox ou não.
 
+Antes de iniciar o ambiente, informe qual tamanho da turma:
+
+```
+./gera_turma.sh
+```
+
 Execute o seguinte comando na pasta onde baixou os arquivos do git:
 
 ```
 docker-compose up
 ```
 
-Agora basta conectar no IP do seu docker host e verá o resultado da aplicação. Caso esteja usando Docker Toolbox o ip normalmente é 192.168.99.100. Caso esteja usando GNU/Linux, basta acessar a 127.0.0.1 via navegador.
+Agora basta conectar no IP do seu docker host e verá o resultado da aplicação. Caso esteja usando Docker Toolbox o ip normalmente é 192.168.99.100/aluno1. Caso esteja usando GNU/Linux, basta acessar a 127.0.0.1/aluno1 via navegador.
+
+Ainda falta uma interface para interagir com o código de cada ambiente de aluno.
 
 ## Usando a partir dos fontes (Sem Docker) 
 

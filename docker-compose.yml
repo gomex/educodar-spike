@@ -1,20 +1,34 @@
 version: '2'
 
 services:
-  compilador:
-    build:
-      context: .
-      dockerfile: Dockerfile_java
-    volumes:
-      - ./:/educodar
+#  compilador:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile_java
+#    volumes_from:
+#      - ./:/educodar
 
-  web:
+  proxy:
+   build:
+      context: .
+      dockerfile: Dockerfile_proxy
+   ports:
+    - 80:80
+  aluno1:
     build:
       context: .
       dockerfile: Dockerfile_ruby
     volumes:
-      - ./:/educodar
-    ports:
-      - 80:4567
-    depends_on:
-      - compilador
+      - /educodar
+  aluno2:
+    build:
+      context: .
+      dockerfile: Dockerfile_ruby
+    volumes:
+      - /educodar
+  aluno3:
+    build:
+      context: .
+      dockerfile: Dockerfile_ruby
+    volumes:
+      - /educodar
