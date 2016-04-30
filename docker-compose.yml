@@ -14,21 +14,3 @@ services:
       dockerfile: Dockerfile_proxy
    ports:
     - 80:80
-  aluno1:
-    build:
-      context: .
-      dockerfile: Dockerfile_ruby
-    volumes:
-      - /educodar
-  aluno2:
-    build:
-      context: .
-      dockerfile: Dockerfile_ruby
-    volumes:
-      - /educodar
-  aluno3:
-    build:
-      context: .
-      dockerfile: Dockerfile_ruby
-    volumes:
-      - /educodar
